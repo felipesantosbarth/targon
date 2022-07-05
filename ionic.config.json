@@ -1,0 +1,7 @@
+{
+  "name": "targon",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
