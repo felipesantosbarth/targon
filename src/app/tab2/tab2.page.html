@@ -1,17 +1,165 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-title>
+			Escalação
+		</ion-title>
+		<ion-progress-bar *ngIf="showLoader" type="indeterminate"></ion-progress-bar>
+	</ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-content [fullscreen]="true" class="page-desempenho">
+	<!-- <ion-header collapse="condense">
+		<ion-toolbar>
+			<ion-title size="large">Tab 2</ion-title>
+		</ion-toolbar>
+	</ion-header> -->
+	<!-- <ion-button color="secondary" size="small" (click)="fetchUsers()">Get Users</ion-button> -->
+	<div>
+	</div>
+	<div>
+		<ion-text *ngIf="user.contratacoes.total == 0">
+			<h3>Não há jogadores contratados.</h3>
+		</ion-text>
+		<ion-list lines="none" *ngIf="!showLoader">
+			<ion-item *ngFor="let titular of titulares; let i = index" class="card-player">
+				<ion-avatar item-start class="ion-align-items-end">
+					<img src="https://acaodireta.com/testes/v3/api/uploads/players/{{ titular.ultimaTemporada }}/{{ titular.foto }}" alt="">
+				</ion-avatar>
+				<ion-grid class="player-data escalado">
+					<ion-row>
+						<h2 class="nome-jogador">{{ titular.apelido }}</h2>
+					</ion-row>
+					<ion-row>
+						<h3 class="posicao-jogador"><ion-icon src="assets/icon/positions/{{ titular.posicao.svgIcon }}"></ion-icon> <strong>{{ titular.posicao.sigla }}</strong> - {{ titular.clube.apelido }}</h3>
+					</ion-row>
+					<ion-row>
+						<ion-col>
+							<p class="little-card">{{ titular.pontos }}</p>
+						</ion-col>
+						<ion-col>
+							<p class="little-card"><ion-icon name="medal"></ion-icon> {{ titular.valorizacao }}
+								<ion-icon name="trending-{{ titular.trend }}" class="trend"></ion-icon>
+							</p>
+						</ion-col>
+					</ion-row>
+				</ion-grid>
+				<ion-buttons *ngIf="((premium) && (reservas.length > 0))" start class="btn-substituir">
+					<button ion-button class="habilitar-troca" icon-only (click)="solicitarTroca($event, titular.id)">
+						<ion-icon name="swap"></ion-icon>
+					</button>
+					<button ion-button class="substituir" icon-only (click)="trocarEscalacao($event, titular.id)">
+						<ion-icon name="repeat"></ion-icon>
+					</button>
+				</ion-buttons>
+			</ion-item>
+		</ion-list>
+		<ion-list lines="none" *ngIf="showLoader">
+			<ion-item *ngFor="let number of user.contratacoes.lista.titulares" class="card-player">
+				<ion-thumbnail slot="start">
+					<ion-skeleton-text [animated]="true"></ion-skeleton-text>
+				</ion-thumbnail>
+				<ion-label>
+					<h3>
+						<ion-skeleton-text [animated]="true" style="width: 80%;"></ion-skeleton-text>
+					</h3>
+					<p>
+						<ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+					</p>
+					<p>
+						<ion-skeleton-text [animated]="true" style="width: 30%;"></ion-skeleton-text>
+					</p>
+				</ion-label>
+			</ion-item>
+		</ion-list>
+		<ion-button *ngIf="user.contratacoes.total <= user.contratacoes.limite" id="players" (click)="openModal()" class="notification-btn" size="defalt" strong="true"><ion-icon name="add-circle-outline"></ion-icon> Contratar</ion-button>
+	</div>
 </ion-content>
+<ion-modal class="modal-players" trigger="players" (willDismiss)="onWillDismiss($event)">
+	<ng-template>
+		<ion-header>
+			<ion-toolbar>
+				<ion-buttons slot="start">
+					<ion-button (click)="cancel()"><ion-icon name="close-outline"></ion-icon></ion-button>
+				</ion-buttons>
+				<ion-title class="ion-text-center">Todos</ion-title>
+				<ion-buttons slot="end">
+					<ion-button (click)="confirm()"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
+				</ion-buttons>
+			</ion-toolbar>
+			<ion-searchbar placeholder="Procurar" (ionInput)="procurar($event)"></ion-searchbar>
+			<ion-segment class="role-segment" [(ngModel)]="sectionModal" value="{{ sectionModal }}" id="role-search" swipe-gesture="true" (ionChange)="modalSegmentChanged($event)">
+				<ion-segment-button value="all">
+					All
+				</ion-segment-button>
+				<ion-segment-button value="1">
+					<ion-icon src="assets/icon/positions/top-lane.svg"></ion-icon>
+				</ion-segment-button>
+				<ion-segment-button value="2">
+					<ion-icon src="assets/icon/positions/jungle.svg"></ion-icon>
+				</ion-segment-button>
+				<ion-segment-button value="3">
+					<ion-icon src="assets/icon/positions/mid-lane.svg"></ion-icon>
+				</ion-segment-button>
+				<ion-segment-button value="4">
+					<ion-icon src="assets/icon/positions/bot-lane.svg"></ion-icon>
+				</ion-segment-button>
+				<ion-segment-button value="5">
+					<ion-icon src="assets/icon/positions/support.svg"></ion-icon>
+				</ion-segment-button>
+			</ion-segment>
+		</ion-header>
+		<ion-content class="modal-content">
+			<ion-list lines="none" *ngIf="!showModalLoader" id="modalPlayersList">
+				<ion-item *ngFor="let jogador of players; let i = index;" class="card-player" id="indice-{{ i }}">
+					<ion-avatar item-start class="ion-align-items-end">
+						<img src="https://acaodireta.com/testes/v3/api/uploads/players/{{ jogador.ultimaTemporada }}/{{ jogador.foto }}" alt="">
+					</ion-avatar>
+					<ion-grid class="player-data escalado">
+						<ion-row>
+							<h2 class="nome-jogador">{{ jogador.apelido }}</h2>
+						</ion-row>
+						<ion-row>
+							<h3 class="posicao-jogador"><ion-icon src="assets/icon/positions/{{ jogador.posicao.svgIcon }}"></ion-icon> <strong>{{ jogador.posicao.sigla }}</strong> - {{ jogador.clube.apelido }}</h3>
+						</ion-row>
+						<ion-row>
+							<ion-col>
+								<p class="little-card">{{ jogador.pontos }}</p>
+							</ion-col>
+							<ion-col>
+								<p class="little-card"><ion-icon name="medal"></ion-icon> {{ jogador.valorizacao }}
+									<ion-icon name="trending-{{ jogador.trend }}" class="trend"></ion-icon>
+								</p>
+							</ion-col>
+						</ion-row>
+					</ion-grid>
+					<ion-buttons *ngIf="((premium) && (reservas.length > 0))" start class="btn-substituir">
+						<button ion-button class="habilitar-troca" icon-only (click)="solicitarTroca($event, jogador.id)">
+							<ion-icon name="swap"></ion-icon>
+						</button>
+						<button ion-button class="substituir" icon-only (click)="trocarEscalacao($event, jogador.id)">
+							<ion-icon name="repeat"></ion-icon>
+						</button>
+					</ion-buttons>
+				</ion-item>
+			</ion-list>
+			<ion-list lines="none" *ngIf="showModalLoader">
+				<ion-item *ngFor="let number of [0,1,2,3,4,5,6]" class="card-player">
+					<ion-thumbnail slot="start">
+						<ion-skeleton-text [animated]="true"></ion-skeleton-text>
+					</ion-thumbnail>
+					<ion-label>
+						<h3>
+							<ion-skeleton-text [animated]="true" style="width: 80%;"></ion-skeleton-text>
+						</h3>
+						<p>
+							<ion-skeleton-text [animated]="true" style="width: 60%;"></ion-skeleton-text>
+						</p>
+						<p>
+							<ion-skeleton-text [animated]="true" style="width: 30%;"></ion-skeleton-text>
+						</p>
+					</ion-label>
+				</ion-item>
+			</ion-list>
+		</ion-content>
+	</ng-template>
+</ion-modal>

@@ -29,13 +29,51 @@
 	--ion-font-family:'Lexend Deca';
 	font-family: 'Lexend Deca', sans-serif;
 }
+:host, :root {
+   --branco: #ffffff;
+   --offwhite: #f9f9f9;
+   --magenta: #d950e5;
+   --lightgray: #ececec;
+   --gray: #c4c4c4;
+   --midgray: #a7a7a7;
+   --deepgray: #343434;
+   --preto: #000000;
+   --azul: #1b77f3;
+   --facebook: #1877f2;
+   --vermelho: #cf3c3f;
+   --bgpadrao: var(--offwhite);
+   --ion-background-color: var(--bgpadrao);
+}
 .page-login {
 	input.native-input.sc-ion-input-md, input.native-input.sc-ion-input-ios {
 		--padding-top: 23px;
 		--padding-bottom: 4px;
 	}
-
 }
+// .page-desempenho {
+// 	.card {
+// 		.item-native {
+// 			--padding-start: 0 !important;
+// 			--inner-padding-end: 0 !important;
+// 		}
+// 	}
+// }
+.cl50 {
+    width: calc(50% - 8px);
+}
+ion-alert {
+	backdrop-filter: blur(5px);
+	.alert-wrapper.sc-ion-alert-md {
+		border-radius: 17px;
+	}
+	.alert-button.ion-text-center {
+		.alert-button-inner.sc-ion-alert-md {
+			-ms-flex-pack: center;
+			justify-content: center;
+		}
+	}
+}
+
 ion-popover {
 	--background: #d950e5;
 	--backdrop-opacity: 0.6;

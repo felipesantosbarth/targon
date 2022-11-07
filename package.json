@@ -30,6 +30,7 @@
     "@capacitor/keyboard": "1.2.3",
     "@capacitor/status-bar": "1.0.8",
     "@ionic/angular": "^6.1.9",
+    "@ionic/storage-angular": "^3.0.6",
     "cordova-plugin-firebase": "^2.0.5",
     "cordova-plugin-splashscreen": "^6.0.1",
     "cordova-plugin-statusbar": "^3.0.0",

@@ -3,5 +3,9 @@
   "integrations": {
     "capacitor": {}
   },
-  "type": "angular"
+  "type": "angular",
+  "proxies": [{
+  	"path": "/getplayers",
+  	"proxyUrl": "https://acaodireta.com/testes/v3/api"
+  }]
 }

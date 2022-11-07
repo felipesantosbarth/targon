@@ -1,0 +1,1247 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ion",
+				"ion-button"
+			],
+			[
+				"bordes",
+				"border-style"
+			],
+			[
+				"border-",
+				"border-color"
+			],
+			[
+				"border",
+				"border-width"
+			],
+			[
+				"input",
+				"input_wrapper\t(login.page.html)"
+			],
+			[
+				"modal",
+				"modal-notification\t(login.page.html)"
+			],
+			[
+				"notifi",
+				"notification\t(login.page.ts)"
+			],
+			[
+				"notific",
+				"notification-btn\t(login.page.scss)"
+			],
+			[
+				"ng",
+				"ngSubmit)=\"logIn\t(login.page.html)"
+			],
+			[
+				"Ion",
+				"IonicConfig"
+			],
+			[
+				"fire",
+				"firebase"
+			],
+			[
+				"route",
+				"routeWithNavController\t(index.d.ts)"
+			],
+			[
+				"dis",
+				"display\t(reset.less)"
+			],
+			[
+				"banner",
+				"banner-legenda\t(home.php)"
+			],
+			[
+				"wit",
+				"withside"
+			],
+			[
+				"cate",
+				"category-title"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"control",
+				"controlfilter\t(base.less)"
+			],
+			[
+				"contorl",
+				"controlfilter"
+			],
+			[
+				"cinza",
+				"cinzaClaro\t(reset.less)"
+			],
+			[
+				"nav",
+				"nav-search"
+			],
+			[
+				"item",
+				"item-submenu"
+			],
+			[
+				"page",
+				"pagelink"
+			],
+			[
+				"content",
+				"content-section\t(produto.php)"
+			],
+			[
+				"opcoes",
+				"opcoes-embalagem\t(produtos.php)"
+			],
+			[
+				"cook",
+				"cookiealert\t(jquery.cookiealert.css)"
+			],
+			[
+				"meta",
+				"metatags\t(BaseController.php)"
+			],
+			[
+				"Cinza",
+				"cinzaHr"
+			],
+			[
+				"SiteC",
+				"SiteConfig\t(SiteConfig.php)"
+			],
+			[
+				"texto",
+				"texto-pergunta"
+			],
+			[
+				"texto-",
+				"texto-pergunta\t(faq.php)"
+			],
+			[
+				"visi",
+				"visibility"
+			],
+			[
+				"close",
+				"close-search"
+			],
+			[
+				"pergun",
+				"perguntas-frequentes\t(contato.php)"
+			],
+			[
+				"form",
+				"formulario\t(contato.php)"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"contat",
+				"contact-part\t(menu.php)"
+			],
+			[
+				"selo",
+				"selos-rodape\t(footer.php)"
+			],
+			[
+				"list",
+				"list-unstyled\t(footer.php)"
+			],
+			[
+				"ow",
+				"owlCarousel"
+			],
+			[
+				"btn",
+				"btn-next\t(home.php)"
+			],
+			[
+				"lin",
+				"link-produto\t(base.less)"
+			],
+			[
+				"nav-s",
+				"nav-search\t(menu.php)"
+			],
+			[
+				"fk-",
+				"fk-btn\t(home.php)"
+			],
+			[
+				"mo",
+				"mobilemenu"
+			],
+			[
+				"fonts",
+				"font-size"
+			],
+			[
+				"mar-",
+				"margin-right\t(main.css)"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"hear",
+				"header-start\t(newmenu.php)"
+			],
+			[
+				"che",
+				"checkbox"
+			],
+			[
+				"cu",
+				"curriculo"
+			],
+			[
+				"profisisonal",
+				"profissional"
+			],
+			[
+				"dados",
+				"dados_profissionais"
+			],
+			[
+				"quero",
+				"quero-ser-atendido\t(Site.php)"
+			],
+			[
+				"pro",
+				"profissionais\t(Site.php)"
+			],
+			[
+				"align",
+				"align-items"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"tag",
+				"tag-cloud"
+			],
+			[
+				"es",
+				"especialidade"
+			],
+			[
+				"especiali",
+				"especialidades"
+			],
+			[
+				"lista",
+				"lista-opcoes"
+			],
+			[
+				"aria",
+				"aria-disabled\t(dados-profissionais.php)"
+			],
+			[
+				"conteu",
+				"conteudo-form\t(para-empresas.php)"
+			],
+			[
+				"uri_",
+				"uri_string\t(dados-profissionais.php)"
+			],
+			[
+				"lazy",
+				"lazyload\t(base.less)"
+			],
+			[
+				"conta",
+				"container"
+			],
+			[
+				"red",
+				"redirect\tCI - URL Helper - redirect"
+			],
+			[
+				"dia",
+				"diaagenda"
+			],
+			[
+				"dias",
+				"dias_disponiveis"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"ur",
+				"uri_string"
+			],
+			[
+				"on",
+				"on\t.on()"
+			],
+			[
+				"assets",
+				"assets_url"
+			],
+			[
+				"lista-va",
+				"lista-vantagens\t(etapa_3.php)"
+			],
+			[
+				"fake",
+				"fake-label"
+			],
+			[
+				"desta",
+				"destaque-desconto"
+			],
+			[
+				"campos",
+				"campos-forma-pagamento-1\t(etapa_4.php)"
+			],
+			[
+				"solici",
+				"solicitacao\t(Site.php)"
+			],
+			[
+				"java",
+				"javascript\t(Site.php)"
+			],
+			[
+				"check",
+				"checkbox\t(menu.php)"
+			],
+			[
+				"data-elem",
+				"data-element-as-close"
+			],
+			[
+				"data-element-a",
+				"data-element-as-close\t(vendas.js)"
+			],
+			[
+				"data-element-as-",
+				"data-element-as-fieldset\t(base.less)"
+			],
+			[
+				"element-as",
+				"element-as-fieldset\t(form-mais-info.php)"
+			],
+			[
+				"endc",
+				"endforeach\t(home.php)"
+			],
+			[
+				"obir",
+				"obrigado_por_participar\t(Site.php)"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"campo",
+				"campo-pix"
+			],
+			[
+				"politica",
+				"politica-de-privacidade\t(Site.php)"
+			],
+			[
+				"cell",
+				"cellpadding\t(politica-de-privacidade.php)"
+			],
+			[
+				"in",
+				"inherit"
+			],
+			[
+				"fons",
+				"font-size"
+			],
+			[
+				"read",
+				"readCookie"
+			],
+			[
+				"append",
+				"appendTo\t.appendTo()"
+			],
+			[
+				"politi",
+				"politica-de-cookies\t(Site.php)"
+			],
+			[
+				"gerar",
+				"gerar-link\t(base.less)"
+			],
+			[
+				"section",
+				"section-content"
+			],
+			[
+				"CLASS",
+				"class\tAttr"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"print",
+				"print_r($this"
+			],
+			[
+				"nm",
+				"nm_cidade"
+			],
+			[
+				"sua",
+				"sua_compra\t(Site.php)"
+			],
+			[
+				"basel",
+				"base_url"
+			],
+			[
+				"baunilha",
+				"baunilha2"
+			],
+			[
+				"nome",
+				"nome_leads\t(scripts.php)"
+			],
+			[
+				"last",
+				"last-child\t(base.less)"
+			],
+			[
+				"has",
+				"hasClass\t.hasClass()"
+			],
+			[
+				"now",
+				"nowrap"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"tri",
+				"trigger\t.trigger()"
+			],
+			[
+				"via",
+				"viaCep"
+			],
+			[
+				"bem",
+				"bem-vindo"
+			],
+			[
+				"texta",
+				"text-align"
+			],
+			[
+				"str",
+				"strtoint"
+			],
+			[
+				"novo",
+				"novo_passo"
+			],
+			[
+				"obej",
+				"object\t(base.less)"
+			],
+			[
+				"jus",
+				"justify"
+			],
+			[
+				"inl",
+				"inline"
+			],
+			[
+				"border-s",
+				"border-spacing"
+			],
+			[
+				"minh",
+				"min-height"
+			],
+			[
+				"header",
+				"header-back"
+			],
+			[
+				"obje",
+				"object-fit"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"be",
+				"between"
+			],
+			[
+				"unde",
+				"underline"
+			],
+			[
+				"isn",
+				"isnt_titular\t(base.less)"
+			],
+			[
+				"conver",
+				"conversion"
+			],
+			[
+				"eta",
+				"etapa-1"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/app/tab2/tab2.page.html",
+			"settings":
+			{
+				"buffer_size": 1513,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/tab2/tab2.page.ts",
+			"settings":
+			{
+				"buffer_size": 1096,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/login/login.page.html",
+			"settings":
+			{
+				"buffer_size": 3774,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/login/login.page.ts",
+			"settings":
+			{
+				"buffer_size": 4178,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/app.module.ts",
+			"settings":
+			{
+				"buffer_size": 3062,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/global.scss",
+			"settings":
+			{
+				"buffer_size": 1833,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/login/login.page.scss",
+			"settings":
+			{
+				"buffer_size": 4734,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/app/tabs/tabs.page.html",
+			"settings":
+			{
+				"buffer_size": 755,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 137.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 368.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon"
+	],
+	"file_history":
+	[
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/ionic.config.json",
+		"/Z/Costa Allegra/Projeto 01/ftpsync.settings",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tab3/tab3.page.scss",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tab3/tab3.module.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tab3/tab3.page.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tab3/tab3.page.html",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/.gitignore",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/typed-assert/src/index.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@angular/forms/index.d.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@ionic/core/dist/collection/components/input/input.md.css",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/app.component.scss",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/app.component.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/login/login.page.scss",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tabs/tabs.page.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tabs/tabs-routing.module.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/global.scss",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tab2/tab2.module.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tab2/tab2.page.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tab2/tab2.page.html",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/login/login-routing.module.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/login/login.page.html",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/login/login.module.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/main.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/app-routing.module.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/app.component.html",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tab1/tab1.page.html",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/package.json",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/explore-container/explore-container.component.scss",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@angular/router/index.d.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/services/auth/auth.service.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tabs/tabs.page.html",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@awesome-cordova-plugins/deeplinks/ngx/index.d.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@ionic/angular/providers/nav-controller.d.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@angular/core/index.d.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@angular/fire/compat/auth/auth.module.d.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@angular/fire/bundles/angular-fire-compat.umd.js",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@firebase/auth/dist/auth.d.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@firebase/auth/dist/auth-public.d.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@angular/fire/compat/firebase.app.module.d.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@firebase/auth-compat/dist/index.esm2017.js",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/firebase/compat/index.d.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@angular/fire/fesm2015/angular-fire-compat-auth.js",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@ionic/angular/ionic-module.d.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/auth.service.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@awesome-cordova-plugins/deeplinks/index.d.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@awesome-cordova-plugins/deeplinks/ngx/index.js",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/auth.service.spec.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@firebase/app/dist/app.d.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@firebase/analytics-compat/dist/src/index.d.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/environments/environment.ts",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/providers/auth/auth.service.ts",
+		"/D/Samba (D)/vegetclean/assets/images/banner/banner-0-420.webp",
+		"/D/Samba (D)/vegetclean/application/modules/site/views/template/footer.php",
+		"/C/xampp/php/php.ini",
+		"/D/Samba (D)/marea-aparthotel/.gitignore",
+		"/D/Samba (D)/vegetclean/ftpsync.settings",
+		"/D/Samba (D)/vegetclean/.gitignore",
+		"/D/Samba (D)/akitutes_site/.gitignore",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/home.php",
+		"/D/Samba (D)/higex-vendas/app/Helpers/functions_helper.php",
+		"/D/Samba (D)/higex-vendas/public/scripts/pages/carrinho.js",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/carrinho.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/template/header.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/empresa.php",
+		"/D/Samba (D)/higex-vendas/app/Language/pt-BR/site/Empresa.php",
+		"/C/xampp/htdocs/higex/application/modules/site/views/pages/empresa.php",
+		"/D/Samba (D)/higex-vendas/app/Controllers/BaseController.php",
+		"/D/Samba (D)/higex-vendas/public/libraries/translate/css/icones/de.png",
+		"/D/Samba (D)/higex-vendas/app/Views/site/template/paginacao.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/include/listagem-produtos.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/include/relacionados.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/cliente/detalhes.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/template/menu.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/template/footer.php",
+		"/D/Samba (D)/higex-vendas/app/Config/SiteConfig.php",
+		"/C/Users/Atualização/Documents/Unknown-title.txt",
+		"/D/Samba (D)/higex-vendas/.git/MERGE_MSG",
+		"/D/Samba (D)/higex-vendas/public/images/icones/favicons/manifest.json",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/troca.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/termos.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/politica.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/template/scripts.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/cliente/pedidos.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/solucoes.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/cliente/login.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/cliente/cadastro.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/produto.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/produtos.php",
+		"/D/Samba (D)/higex-vendas/public/scripts/main.js",
+		"/D/Samba (D)/higex-vendas/public/libraries/translate/js/translate.js",
+		"/D/Samba (D)/higex-vendas/.git/config",
+		"/D/Samba (D)/higex-vendas/.git/REBASE_HEAD",
+		"/D/Samba (D)/higex-vendas/.git/ORIG_HEAD",
+		"/D/Samba (D)/higex-vendas/.git/HEAD",
+		"/D/Samba (D)/higex-vendas/ftpsync.settings",
+		"/D/Samba (D)/higex-vendas/public/scripts/pages/produto.js",
+		"/D/Samba (D)/macarronada-italiana/assets/scripts/main.js",
+		"/D/Samba (D)/higex-vendas/app/Models/Admin/ProdutoModel.php",
+		"/C/xampp/htdocs/higex/application/modules/site/views/pages/include/listagem-produtos.php",
+		"/Z/Sonho da Lagoinha/Projeto 01/application/config/config.php",
+		"/Z/Sonho da Lagoinha/Projeto 01/assets/scripts/main.js",
+		"/Z/Sonho da Lagoinha/Projeto 01/application/modules/site/views/template/header.php",
+		"/Z/Sonho da Lagoinha/Projeto 01/application/modules/site/views/template/menu.php",
+		"/C/xampp/htdocs/higex/application/modules/site/views/pages/produto.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/seguranca.php",
+		"/D/Samba (D)/higex-vendas/public/libraries/cookies/js/jquery.cookiealert.js",
+		"/D/Samba (D)/higex-vendas/public/libraries/cookies/css/jquery.cookiealert.css",
+		"/Z/Chacara Rio jordao/Projeto 02/sistema/application/views/template/sidebar.php",
+		"/Z/Chacara Rio jordao/Projeto 02/sistema/application/views/pages/popup/form.php",
+		"/Z/Chacara Rio jordao/Projeto 02/sistema/application/views/pages/home.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/contato.php",
+		"/D/Samba (D)/higex-vendas/app/Views/site/pages/faq.php",
+		"/D/Samba (D)/ismael-bordados/application/modules/site/views/template/scripts.php",
+		"/D/Samba (D)/higex-vendas/app/Controllers/SiteController.php",
+		"/D/Samba (D)/higex-vendas/app/Config/Routes.php",
+		"/C/xampp/htdocs/higex/application/modules/site/views/template/header.php",
+		"/D/Samba (D)/higex-vendas/public/admin_/plugins/codemirror/mode/pug/pug.js",
+		"/D/Samba (D)/higex-vendas/assets/styles/less/incs/variaveis.less",
+		"/D/Samba (D)/higex-vendas/assets/styles/less/incs/mixins.less",
+		"/D/Samba (D)/higex-vendas/assets/styles/less/incs/reset.less",
+		"/D/Samba (D)/higex-vendas/assets/styles/less/medias/base.less",
+		"/D/Samba (D)/higex-vendas/application/modules/site/controllers/Site.php",
+		"/D/Samba (D)/higex-vendas/application/modules/site/views/pages/faq.php",
+		"/D/Samba (D)/higex-vendas/assets/styles/less/incs/funcoes.less",
+		"/D/Samba (D)/higex-vendas/assets/styles/less/site.css",
+		"/D/Samba (D)/higex-vendas/application/config/config.php",
+		"/C/xampp/htdocs/akitutes/assets/images/icones/whats.svg",
+		"/Z/Arflex/Projeto 02/assets/scripts/pages/home.js"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 160.0,
+		"where_history":
+		[
+			"C:\\Users\\Atualização\\Desktop\\projetos-ionic\\segundoProjeto\\targon\\node_modules",
+			"<open files>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"cantStart",
+			"color=\"",
+			" shape=\"round\"",
+			"form",
+			"var(--magenta)",
+			"input",
+			"16px",
+			"-white",
+			"white",
+			"notifycation",
+			"descrition",
+			"LoginPage",
+			"this.afAuth",
+			"afAtuh",
+			"auth",
+			".ts",
+			"Tab3Page",
+			"../app/tab",
+			"NavController",
+			"'tab",
+			"Tab",
+			"tab",
+			"class",
+			"ErrorhANDLER",
+			"Error",
+			"class",
+			"Module",
+			"Tab1PageModule",
+			"AuthProvider",
+			"Platform",
+			"Observable",
+			"TabsPage,",
+			"2",
+			"1",
+			"compon",
+			"StatusBar",
+			"Platform",
+			"environment",
+			"firebase",
+			"NavController",
+			"SplashScreen",
+			"service"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/app/tab2/tab2.page.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1513,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								557,
+								557
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "html",
+							"buffer_scroll_name": "c627386b",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"spell_check": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/app/tab2/tab2.page.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1096,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								917,
+								917
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "javascript",
+							"buffer_scroll_name": "9d16ff06",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"spell_check": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/app/login/login.page.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3774,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1118,
+								1118
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "html",
+							"buffer_scroll_name": "acfab0c6",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"spell_check": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/app/login/login.page.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4178,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								549,
+								549
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "javascript",
+							"buffer_scroll_name": "093565df",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"spell_check": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 78.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/app/app.module.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3062,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1398,
+								1398
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "javascript",
+							"buffer_scroll_name": "c78b7642",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"spell_check": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/global.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1833,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1401,
+								1401
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "less",
+							"buffer_scroll_name": "403e761e",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"spell_check": false,
+							"synced": false,
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/app/login/login.page.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4734,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								856,
+								856
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "less",
+							"buffer_scroll_name": "62c86fbe",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"spell_check": false,
+							"synced": false,
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/app/tabs/tabs.page.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 755,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								56,
+								56
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "html",
+							"buffer_scroll_name": "1e0360db",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"spell_check": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 39.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 55.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "targon.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"filiacao-cl",
+				"application\\views\\pages\\filiacao-de-clube-associacao.php"
+			],
+			[
+				"site",
+				"application\\controllers\\site.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"enc",
+				"C:\\Users\\Atualização\\Desktop\\Projetos\\encantada-floripa.sublime-project"
+			],
+			[
+				"",
+				"C:\\Users\\Atualização\\Desktop\\Projetos\\beretta.sublime-project"
+			],
+			[
+				"affesc",
+				"C:\\Users\\Atualização\\Desktop\\Projetos\\affesc-2015-affesc.sublime-project"
+			],
+			[
+				"bone",
+				"C:\\Users\\Atualização\\Desktop\\Projetos\\boneca-russa.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 323.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

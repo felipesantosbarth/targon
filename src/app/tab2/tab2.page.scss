@@ -1,0 +1,105 @@
+:host, :root {
+   --branco: #ffffff;
+   --offwhite: #f9f9f9;
+   --magenta: #d950e5;
+   --lightgray: #ececec;
+   --gray: #c4c4c4;
+   --midgray: #a7a7a7;
+   --deepgray: #343434;
+   --preto: #000000;
+   --azul: #1b77f3;
+   --facebook: #1877f2;
+   --vermelho: #cf3c3f;
+   --bgpadrao: var(--offwhite);
+   --ion-background-color: var(--bgpadrao);
+}
+
+
+.page-desempenho {
+	--background: var(--offwhite);
+	background: var(--offwhite);
+}
+.modal-players {
+	.role-segment {
+		width: 100%;
+		ion-segment-button {
+			padding: 0;
+			width: 48px;
+			height: 48px;
+			min-width: inherit;
+			ion-icon {
+				font-size: 17px;
+			}
+		}
+	}
+	.modal-content {
+		--background: var(--offwhite);
+		background: var(--offwhite);
+	}
+}
+.list-md {
+	margin-top: 12px;
+}
+ion-item::part(native) {
+	--padding-start: 0 !important;
+	--inner-padding-end: 0 !important;
+}
+.card-player {
+	width: 90%;
+	margin: auto;
+	// padding: 0;
+	align-items: end;
+	border-radius: 7px;
+	position: relative;
+	margin-bottom: 10px;
+	background: var(--branco);
+	// justify-content: space-between;
+	box-shadow: 0px 0 3px 1px var(--gray);
+	&.not-visible {
+		display: none;
+		--background: var(--midgray) !important;
+		background: var(--midgray) !important;
+	}
+	ion-avatar {
+		bottom: 0;
+		margin: 0;
+		left: -15px;
+		width: 60px;
+		height: 87%;
+		position: absolute;
+		--border-radius: 0;
+		img {
+			display: block;
+			object-fit: contain;
+		}
+	}
+	.player-data {
+		width: 100%;
+		padding-left: 50px;
+		.nome-jogador {
+			margin: 0;
+			width: 100%;
+			font-size: 18px;
+			font-weight: 700;
+		}
+		.posicao-jogador {
+			margin: 0;
+			width: 100%;
+			font-size: 12px;
+			color: var(--midgray);
+			ion-icon {
+				margin-right: 8px;
+				font-size: 14px;
+				display: inline-block;
+				vertical-align: text-top;
+				color: var(--midpgray);
+			}
+		}
+		.little-card {
+			margin: 0;
+			width: 100%;
+			font-size: 12px;
+			color: var(--gray);
+		}
+	}
+}
