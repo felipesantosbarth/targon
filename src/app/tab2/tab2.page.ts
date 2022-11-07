@@ -10,11 +10,16 @@ import { ToastController, ModalController, IonModal, IonItem, AlertController } 
 })
 export class Tab2Page {
 	data: any;
-	teste: any;
   	titulares: any;
   	players: any;
   	user: any;
   	showLoader: boolean;
+  	hasFired: boolean = false;
+  	totalTemp: number;
+  	moneyTemp: number;
+  	todosTemp : any[] = [];
+  	titularesTemp : any[] = [];
+  	reservasTemp : any[] = [];
   	showModalLoader: boolean;
   	public playerListVisible = "visible";
   	public sectionModal: any = "all";
@@ -37,9 +42,10 @@ export class Tab2Page {
 				"limite":"5",
 				"total":"0",
 				"lista":{
-					"titulares":[8,7,6,4],
+					"todos":[],
+					"titulares":[],
 					// "titulares":[8,7,6,4,2],
-					"reservas":[1]
+					"reservas":[]
 				},
 			}
 		};
@@ -55,17 +61,16 @@ export class Tab2Page {
 
 	ionViewDidEnter() {
 		this.displayProgress();
-		this.teste = new Array(this.user.contratacoes.total);
 		// fetch('https://acaodireta.com/testes/v3/api/players?apikey='+hash)
 		// .then(res => {
 		// 	console.log(res);
 		// }).catch(error => {
-		// 	console.log('error');
+			// console.log(this.user.contratacoes.total, this.totalTemp);
 		// }).finally(() => {
 		// })
 		if (this.user.contratacoes.total > 0) {
 			var listatxt = this.user.contratacoes.lista.titulares.join(':');
-			// console.log(listatxt);
+			console.log(listatxt);
 			return new Promise(resolve => {
 				// this.http.get('https://acaodireta.com/testes/v3/api/players?apikey='+hash)
 				this.http.get('https://acaodireta.com/testes/v3/api/players?apikey='+this.hash+'&idlist='+listatxt)
@@ -87,6 +92,11 @@ export class Tab2Page {
 	async openModal() {
 		this.sectionModal = "all";
 		this.showModalLoader = true;
+	  	this.moneyTemp = this.user.moeda;
+	  	this.totalTemp = this.user.contratacoes.total;
+	  	this.todosTemp = this.user.contratacoes.lista.todos;
+	  	this.titularesTemp = this.user.contratacoes.lista.titulares;
+	  	this.reservasTemp = this.user.contratacoes.lista.reservas;
 		return new Promise(resolve => {
 			// this.http.get('https://acaodireta.com/testes/v3/api/players?apikey='+hash)
 			this.http.get('https://acaodireta.com/testes/v3/api/players?apikey='+this.hash)
@@ -101,21 +111,30 @@ export class Tab2Page {
 		// modal.present();
 	}
 
-	cancel() {
-		let truck:any = {
-			"aviso":"As contratações feitas serão ignnoradas ao deixar essa tela. Deseja continuar e ignorar?",
-			"confirmTxtBtn":"Sim",
-			"confirmText":"As contratações foram descartadas.",
-			"confirmAction":"closeModal",
-			"cancelTxtBtn":"Não",
-			"cancelText":"Para confirmar as contratações, clique no botão <ion-icon name='checkmark-circle-outline'></ion-icon> ao lado direito",
-			"cancelAction":""
-		};
-		this.presentAlert(truck);
-		// this.modal.dismiss(null, 'cancel');
+	cancelModal() {
+		if ((this.hasFired!=false) || (this.totalTemp!=this.user.contratacoes.total)) {
+			let truck:any = {
+				"aviso":"As contratações feitas serão ignoradas ao deixar essa tela. Deseja continuar e ignorar?",
+				"confirmTxtBtn":"Sim",
+				"confirmText":"As contratações foram descartadas.",
+				"confirmAction":"closeModal",
+				"cancelTxtBtn":"Não",
+				"cancelText":"Para confirmar as contratações, clique no botão <ion-icon name='checkmark-circle-outline'></ion-icon> ao lado direito",
+				"cancelAction":""
+			};
+			this.presentAlert(truck);
+		} else {
+			this.modal.dismiss(null, 'cancel');
+		}
 	}
-	confirm() {
+	confirmModal() {
+	  	this.user.moeda = this.moneyTemp;
+	  	this.user.contratacoes.total = this.totalTemp;
+	  	this.user.contratacoes.lista.todos = this.todosTemp;
+	  	this.user.contratacoes.lista.titulares = this.titularesTemp;
+	  	this.user.contratacoes.lista.reservas = this.reservasTemp;
 		this.modal.dismiss(null, 'confirm');
+		this.ionViewDidEnter();
 	}
 	onWillDismiss(event: Event) {
 		// const ev = event as CustomEvent<OverlayEventDetail<string>>;
@@ -260,5 +279,43 @@ export class Tab2Page {
 			});
 		}
 		await toast.present();
+	}
+
+
+	contratar(event, idSolicitante) {
+		event.stopPropagation();
+		let nome, text;
+		this.totalTemp++;
+		this.todosTemp.push(idSolicitante);
+		if(this.titularesTemp.length=5) {
+			this.reservasTemp.push(idSolicitante);
+		} else {
+			this.titularesTemp.push(idSolicitante);
+		}
+
+		console.log(this.titularesTemp);
+		// this.titulares.filter((item, index) => {
+		// // this.titulares.filter((item, index) => {
+		// 	if (item.id == idSolicitante) {
+		// 		nome = item.apelido;
+		// 	}
+		// });
+		// this.reservas.filter((item, index) => {
+		// // this.reservas.filter((item, index) => {
+		// 	if (item.id == idSolicitante) {
+		// 		nome = item.apelido;
+		// 	}
+		// });
+		// if (this.section == "titulares") { 
+		// 	this.section = "reservas";
+		// 	text = " da line-up?"
+		// }
+		// else { 
+		// 	this.section = "titulares"; 
+		// 	text = " para a line-up?"
+		// }
+		// this.aviso = "Substituir " + nome + text;
+		// this.aproval = true;
+		// this.presentToast("Substituir " + nome + text, "em-substituicao");
 	}
 }

@@ -79,11 +79,11 @@
 		<ion-header>
 			<ion-toolbar>
 				<ion-buttons slot="start">
-					<ion-button (click)="cancel()"><ion-icon name="close-outline"></ion-icon></ion-button>
+					<ion-button (click)="cancelModal()"><ion-icon name="close-outline"></ion-icon></ion-button>
 				</ion-buttons>
-				<ion-title class="ion-text-center">Todos</ion-title>
+				<ion-title class="ion-text-center">Escalação {{ totalTemp }}/{{ user.contratacoes.limite }}</ion-title>
 				<ion-buttons slot="end">
-					<ion-button (click)="confirm()"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
+					<ion-button (click)="confirmModal()"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
 				</ion-buttons>
 			</ion-toolbar>
 			<ion-searchbar placeholder="Procurar" (ionInput)="procurar($event)"></ion-searchbar>
@@ -132,12 +132,12 @@
 							</ion-col>
 						</ion-row>
 					</ion-grid>
-					<ion-buttons *ngIf="((premium) && (reservas.length > 0))" start class="btn-substituir">
-						<button ion-button class="habilitar-troca" icon-only (click)="solicitarTroca($event, jogador.id)">
-							<ion-icon name="swap"></ion-icon>
+					<ion-buttons class="ion-align-items-center action-section">
+						<button ion-button class="btn-action-team contratar" *ngIf="(user.contratacoes.lista.todos.indexOf(jogador.id) === -1)" (click)="contratar($event, jogador.id)" [disabled]="((totalTemp==user.contratacoes.limite) || (moneyTemp < 0))">
+							<ion-icon name="add-circle-outline"></ion-icon>
 						</button>
-						<button ion-button class="substituir" icon-only (click)="trocarEscalacao($event, jogador.id)">
-							<ion-icon name="repeat"></ion-icon>
+						<button ion-button class="btn-action-team vender" icon-only *ngIf="(user.contratacoes.lista.todos.indexOf(jogador.id) > -1)" (click)="trocarEscalacao($event, jogador.id)">
+							<ion-icon name="remove-circle-outline"></ion-icon>
 						</button>
 					</ion-buttons>
 				</ion-item>

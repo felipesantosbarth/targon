@@ -102,4 +102,28 @@ ion-item::part(native) {
 			color: var(--gray);
 		}
 	}
+	.action-section {
+		height: 100%;
+		padding-right: 10px;
+		.btn-action-team {
+			min-width: 48px;
+			font-size: 20px;
+			min-height: 48px;
+			border-radius: 7px;
+			color: var(--branco);
+			transition: all 250ms linear;
+			&.contratar {
+				background: green;
+				--background: green;
+			}
+			&.vender {
+				background: var(--magenta);
+				--background: var(--magenta);
+			}
+			&[disabled] {
+				background: var(--midgray);
+				--background: var(--midgray);
+			}
+		}
+	}
 }
