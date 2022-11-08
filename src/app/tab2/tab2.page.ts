@@ -40,10 +40,10 @@ export class Tab2Page {
 			"premium":"false",
 			"contratacoes": {
 				"limite":"5",
-				"total":"0",
+				"total":"3",
 				"lista":{
-					"todos":[],
-					"titulares":[],
+					"todos":[8,7,6],
+					"titulares":[8,7,6],
 					// "titulares":[8,7,6,4,2],
 					"reservas":[]
 				},
@@ -69,20 +69,7 @@ export class Tab2Page {
 		// }).finally(() => {
 		// })
 		if (this.user.contratacoes.total > 0) {
-			var listatxt = this.user.contratacoes.lista.titulares.join(':');
-			console.log(listatxt);
-			return new Promise(resolve => {
-				// this.http.get('https://acaodireta.com/testes/v3/api/players?apikey='+hash)
-				this.http.get('https://acaodireta.com/testes/v3/api/players?apikey='+this.hash+'&idlist='+listatxt)
-				.subscribe(data => {
-					// console.table(data);
-					this.titulares = data;
-					resolve(this.titulares);
-					// this.data = data;
-					// resolve(this.data);
-					this.killProgressBar();
-				});
-			});
+			this.populateTitulares(this.user.contratacoes.lista.titulares).then(res => this.killProgressBar());
 		} else {
 			// this.presentToast("Apenas membros premium podem substituir o time titular.", "error-msg");
 			this.killProgressBar();
@@ -97,17 +84,8 @@ export class Tab2Page {
 	  	this.todosTemp = this.user.contratacoes.lista.todos;
 	  	this.titularesTemp = this.user.contratacoes.lista.titulares;
 	  	this.reservasTemp = this.user.contratacoes.lista.reservas;
-		return new Promise(resolve => {
-			// this.http.get('https://acaodireta.com/testes/v3/api/players?apikey='+hash)
-			this.http.get('https://acaodireta.com/testes/v3/api/players?apikey='+this.hash)
-			.subscribe(data => {
-				this.players = data;
-				resolve(this.players);
-				// this.data = data;
-				// resolve(this.data);
-				this.showModalLoader = false;
-			});
-		});
+
+		this.populatePlayers().then(res => this.showModalLoader = false);
 		// modal.present();
 	}
 
@@ -134,9 +112,12 @@ export class Tab2Page {
 	  	this.user.contratacoes.lista.titulares = this.titularesTemp;
 	  	this.user.contratacoes.lista.reservas = this.reservasTemp;
 		this.modal.dismiss(null, 'confirm');
-		this.ionViewDidEnter();
+		
+		this.displayProgress();
+		this.populateTitulares(this.titularesTemp).then(res => this.killProgressBar());
 	}
 	onWillDismiss(event: Event) {
+		console.log(this.todosTemp,this.user.contratacoes.lista.todos);
 		// const ev = event as CustomEvent<OverlayEventDetail<string>>;
 		// if (ev.detail.role === 'confirm') {
 		// 	this.message = `Hello, ${ev.detail.data}!`;
@@ -281,8 +262,7 @@ export class Tab2Page {
 		await toast.present();
 	}
 
-
-	contratar(event, idSolicitante) {
+	contratar(event, idSolicitante:number) {
 		event.stopPropagation();
 		let nome, text;
 		this.totalTemp++;
@@ -293,7 +273,7 @@ export class Tab2Page {
 			this.titularesTemp.push(idSolicitante);
 		}
 
-		console.log(this.titularesTemp);
+		// console.log(this.titularesTemp);
 		// this.titulares.filter((item, index) => {
 		// // this.titulares.filter((item, index) => {
 		// 	if (item.id == idSolicitante) {
@@ -317,5 +297,34 @@ export class Tab2Page {
 		// this.aviso = "Substituir " + nome + text;
 		// this.aproval = true;
 		// this.presentToast("Substituir " + nome + text, "em-substituicao");
+	}
+
+	async populatePlayers() {
+		return new Promise(resolve => {
+			// this.http.get('https://acaodireta.com/testes/v3/api/players?apikey='+hash)
+			this.http.get('https://acaodireta.com/testes/v3/api/players?apikey='+this.hash)
+			.subscribe(data => {
+				this.players = data;
+				resolve(this.players);
+				// this.data = data;
+				// resolve(this.data);
+			});
+		});
+	}
+
+	async populateTitulares(obj:any[]) {
+		let listatxt = obj.join(':');
+		console.log(listatxt);
+		return new Promise(resolve => {
+			// this.http.get('https://acaodireta.com/testes/v3/api/players?apikey='+hash)
+			this.http.get('https://acaodireta.com/testes/v3/api/players?apikey='+this.hash+'&idlist='+listatxt)
+			.subscribe(data => {
+				// console.table(data);
+				this.titulares = data;
+				resolve(this.titulares);
+				// this.data = data;
+				// resolve(this.data);
+			});
+		});
 	}
 }
