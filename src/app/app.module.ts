@@ -1,4 +1,4 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 // import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -32,6 +32,8 @@ import { TabsPage } from './tabs/tabs.page';
 import { LoginPage } from './login/login.page';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 // import { LoginPageModule } from './login/login.module';
+
+import { RoleListComponent } from './components/role-list/role-list.component';
 
 /*const routes: Routes = [
   {
@@ -83,8 +85,11 @@ import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
+  // declarations: [AppComponent, RoleListComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,ReactiveFormsModule,HttpClientModule,IonicStorageModule.forRoot() ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  // entryComponents: [ AppComponent, RoleListComponent ]
 })
 export class AppModule {}

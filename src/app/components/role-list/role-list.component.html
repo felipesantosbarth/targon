@@ -1,0 +1,21 @@
+<!-- <ion-segment class="role-segment" value="{{ sectionModal }}" id="role-search" swipe-gesture="true" (ionChange)="modalSegmentChanged($event)"> -->
+<ion-segment class="role-segment" (ionChange)="modalSegmentChanged($event)" value="{{ sectionModal }}" id="role-search" swipe-gesture="true" >
+	<ion-segment-button value="all">
+		All
+	</ion-segment-button>
+	<ion-segment-button value="1">
+		<ion-icon src="assets/icon/positions/top-lane.svg"></ion-icon>
+	</ion-segment-button>
+	<ion-segment-button value="2">
+		<ion-icon src="assets/icon/positions/jungle.svg"></ion-icon>
+	</ion-segment-button>
+	<ion-segment-button value="3">
+		<ion-icon src="assets/icon/positions/mid-lane.svg"></ion-icon>
+	</ion-segment-button>
+	<ion-segment-button value="4">
+		<ion-icon src="assets/icon/positions/bot-lane.svg"></ion-icon>
+	</ion-segment-button>
+	<ion-segment-button value="5">
+		<ion-icon src="assets/icon/positions/support.svg"></ion-icon>
+	</ion-segment-button>
+</ion-segment>

@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ContratarPage } from '../contratar/contratar.page';
 import { ToastController, ModalController, IonModal, IonItem, AlertController } from '@ionic/angular';
 // import { HTTP } from '@awesome-cordova-plugins/http/ngx';
 
@@ -21,6 +22,7 @@ export class Tab2Page {
   	titularesTemp : any[] = [];
   	reservasTemp : any[] = [];
   	showModalLoader: boolean;
+  	public teste = "teste";
   	public playerListVisible = "visible";
   	public sectionModal: any = "all";
 	public scopo: any[] = [];
@@ -76,6 +78,23 @@ export class Tab2Page {
 		}
 	}
 
+	async openNewModal() {
+		const modal = await this.modaler.create({
+			component: ContratarPage,
+			cssClass: 'modal-players',
+			componentProps: {
+				user: this.user,
+				moeda: this.user.moeda,
+			}
+		});
+		await modal.present();
+		modal.onDidDismiss().then((data) => {
+			if (data.role=='cancel') {
+				console.log(data);
+				this.teste = data.data.teste;
+			}
+		});
+	}
 	async openModal() {
 		this.sectionModal = "all";
 		this.showModalLoader = true;

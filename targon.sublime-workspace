@@ -4,8 +4,88 @@
 		"selected_items":
 		[
 			[
+				"todos",
+				"todosTemp"
+			],
+			[
+				"temp",
+				"titularesTemp"
+			],
+			[
+				"populate",
+				"populateTitulares"
+			],
+			[
+				"titulares",
+				"titularesTemp"
+			],
+			[
+				"id",
+				"idSolicitante"
+			],
+			[
+				"contrata",
+				"contratacoes"
+			],
+			[
+				"tem",
+				"totalTemp"
+			],
+			[
+				"action",
+				"action-section\t(tab2.page.html)"
+			],
+			[
+				"total",
+				"totalTemp"
+			],
+			[
+				"bak",
+				"backdrop"
+			],
+			[
+				"confir",
+				"confirmTxtBtn"
+			],
+			[
+				"cancelN",
+				"cancelTxtBtn"
+			],
+			[
+				"confirm",
+				"confirmText"
+			],
+			[
+				"segm",
+				"segmentModal\t(tab2.page.html)"
+			],
+			[
+				"modal",
+				"modal-players\t(tab2.page.html)"
+			],
+			[
 				"ion",
-				"ion-button"
+				"ion-icon"
+			],
+			[
+				"role",
+				"role-segment\t(tab2.page.html)"
+			],
+			[
+				"mdal",
+				"modal-content\t(tab2.page.html)"
+			],
+			[
+				"contrat",
+				"contratacoes\t(tab2.page.ts)"
+			],
+			[
+				"padd",
+				"padding-inline-start"
+			],
+			[
+				"posi",
+				"posicao-jogador\t(tab2.page.html)"
 			],
 			[
 				"bordes",
@@ -22,10 +102,6 @@
 			[
 				"input",
 				"input_wrapper\t(login.page.html)"
-			],
-			[
-				"modal",
-				"modal-notification\t(login.page.html)"
 			],
 			[
 				"notifi",
@@ -438,92 +514,25 @@
 			[
 				"wid",
 				"width"
-			],
-			[
-				"tri",
-				"trigger\t.trigger()"
-			],
-			[
-				"via",
-				"viaCep"
-			],
-			[
-				"bem",
-				"bem-vindo"
-			],
-			[
-				"texta",
-				"text-align"
-			],
-			[
-				"str",
-				"strtoint"
-			],
-			[
-				"novo",
-				"novo_passo"
-			],
-			[
-				"obej",
-				"object\t(base.less)"
-			],
-			[
-				"jus",
-				"justify"
-			],
-			[
-				"inl",
-				"inline"
-			],
-			[
-				"border-s",
-				"border-spacing"
-			],
-			[
-				"minh",
-				"min-height"
-			],
-			[
-				"header",
-				"header-back"
-			],
-			[
-				"obje",
-				"object-fit"
-			],
-			[
-				"mar",
-				"margin-top"
-			],
-			[
-				"be",
-				"between"
-			],
-			[
-				"unde",
-				"underline"
-			],
-			[
-				"isn",
-				"isnt_titular\t(base.less)"
-			],
-			[
-				"conver",
-				"conversion"
-			],
-			[
-				"eta",
-				"etapa-1"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"file": "src/app/tab2/tab2.page.scss",
+			"settings":
+			{
+				"buffer_size": 2350,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "src/app/tab2/tab2.page.html",
 			"settings":
 			{
-				"buffer_size": 1513,
+				"buffer_size": 7066,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -532,7 +541,7 @@
 			"file": "src/app/tab2/tab2.page.ts",
 			"settings":
 			{
-				"buffer_size": 1096,
+				"buffer_size": 9525,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -568,7 +577,7 @@
 			"file": "src/global.scss",
 			"settings":
 			{
-				"buffer_size": 1833,
+				"buffer_size": 2601,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -637,17 +646,25 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon"
+		"/C/Users/Felipe/Desktop/projetos-ionic/segundoProjeto/targon",
+		"/C/Users/Felipe/Desktop/projetos-ionic/segundoProjeto/targon/src",
+		"/C/Users/Felipe/Desktop/projetos-ionic/segundoProjeto/targon/src/app"
 	],
 	"file_history":
 	[
+		"/C/Users/Felipe/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@ionic/angular/bundles/ionic-angular.umd.js",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/.gitignore",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/assets/icon/positions/mid-lane.svg",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/assets/icon/positions/support.svg",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/assets/icon/positions/top-lane.svg",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/assets/icon/positions/jungle.svg",
+		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/assets/icon/positions/bot-lane.svg",
 		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/ionic.config.json",
 		"/Z/Costa Allegra/Projeto 01/ftpsync.settings",
 		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tab3/tab3.page.scss",
 		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tab3/tab3.module.ts",
 		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tab3/tab3.page.ts",
 		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/src/app/tab3/tab3.page.html",
-		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/.gitignore",
 		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/typed-assert/src/index.ts",
 		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@angular/forms/index.d.ts",
 		"/C/Users/Atualização/Desktop/projetos-ionic/segundoProjeto/targon/node_modules/@ionic/core/dist/collection/components/input/input.md.css",
@@ -762,17 +779,11 @@
 		"/D/Samba (D)/higex-vendas/assets/styles/less/incs/mixins.less",
 		"/D/Samba (D)/higex-vendas/assets/styles/less/incs/reset.less",
 		"/D/Samba (D)/higex-vendas/assets/styles/less/medias/base.less",
-		"/D/Samba (D)/higex-vendas/application/modules/site/controllers/Site.php",
-		"/D/Samba (D)/higex-vendas/application/modules/site/views/pages/faq.php",
-		"/D/Samba (D)/higex-vendas/assets/styles/less/incs/funcoes.less",
-		"/D/Samba (D)/higex-vendas/assets/styles/less/site.css",
-		"/D/Samba (D)/higex-vendas/application/config/config.php",
-		"/C/xampp/htdocs/akitutes/assets/images/icones/whats.svg",
-		"/Z/Arflex/Projeto 02/assets/scripts/pages/home.js"
+		"/D/Samba (D)/higex-vendas/application/modules/site/controllers/Site.php"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
@@ -788,6 +799,28 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"todosTemp",
+			"reservasTemp",
+			"populateTitulares",
+			"user.contratacoes.lista.titulares",
+			"listatxt",
+			"await",
+			"ion-text-center",
+			"confirm",
+			"sectionModal",
+			"segment",
+			"price",
+			"IonItem",
+			"var(--offwhite)",
+			"padding",
+			"class=\"card\"",
+			"titular",
+			"hash",
+			"modalCtrl",
+			"toastCtrl",
+			"titular",
+			"titulares",
+			"black",
 			"cantStart",
 			"color=\"",
 			" shape=\"round\"",
@@ -847,24 +880,59 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/app/tab2/tab2.page.html",
+					"file": "src/app/tab2/tab2.page.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1513,
+						"buffer_size": 2350,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								557,
-								557
+								2084,
+								2084
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "less",
+							"buffer_scroll_name": "d3299192",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"spell_check": false,
+							"synced": false,
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 195.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/app/tab2/tab2.page.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7066,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								226,
+								226
 							]
 						],
 						"settings":
@@ -880,27 +948,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 156.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "src/app/tab2/tab2.page.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1096,
+						"buffer_size": 9525,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								917,
-								917
+								1585,
+								1585
 							]
 						],
 						"settings":
@@ -915,14 +983,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 48.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "src/app/login/login.page.html",
 					"semi_transient": false,
 					"settings":
@@ -934,8 +1002,8 @@
 						"selection":
 						[
 							[
-								1118,
-								1118
+								191,
+								289
 							]
 						],
 						"settings":
@@ -957,7 +1025,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "src/app/login/login.page.ts",
 					"semi_transient": false,
 					"settings":
@@ -969,8 +1037,8 @@
 						"selection":
 						[
 							[
-								549,
-								549
+								3448,
+								3250
 							]
 						],
 						"settings":
@@ -985,14 +1053,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 78.0,
+						"translation.y": 468.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "src/app/app.module.ts",
 					"semi_transient": false,
 					"settings":
@@ -1004,8 +1072,8 @@
 						"selection":
 						[
 							[
-								1398,
-								1398
+								2426,
+								2426
 							]
 						],
 						"settings":
@@ -1019,27 +1087,27 @@
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 891.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "src/global.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1833,
+						"buffer_size": 2601,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1401,
-								1401
+								1968,
+								1968
 							]
 						],
 						"settings":
@@ -1054,14 +1122,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 468.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "src/app/login/login.page.scss",
 					"semi_transient": false,
 					"settings":
@@ -1073,8 +1141,8 @@
 						"selection":
 						[
 							[
-								856,
-								856
+								406,
+								406
 							]
 						],
 						"settings":
@@ -1090,14 +1158,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 143.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "src/app/tabs/tabs.page.html",
 					"semi_transient": false,
 					"settings":
@@ -1128,7 +1196,7 @@
 						"translation.y": 39.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -1136,7 +1204,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -1165,6 +1233,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.SFTP":
+	{
+		"height": 0.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -1177,7 +1249,7 @@
 	"project": "targon.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":

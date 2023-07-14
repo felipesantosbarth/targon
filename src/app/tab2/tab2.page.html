@@ -71,10 +71,11 @@
 				</ion-label>
 			</ion-item>
 		</ion-list>
-		<ion-button *ngIf="user.contratacoes.total <= user.contratacoes.limite" id="players" (click)="openModal()" class="notification-btn" size="defalt" strong="true"><ion-icon name="add-circle-outline"></ion-icon> Contratar</ion-button>
+		<ion-button *ngIf="user.contratacoes.total <= user.contratacoes.limite" id="players" (click)="openNewModal()" class="notification-btn" size="defalt" strong="true"><ion-icon name="add-circle-outline"></ion-icon> Contratar</ion-button>
+		<p>{{ teste }}</p>
 	</div>
 </ion-content>
-<ion-modal class="modal-players" trigger="players" (willDismiss)="onWillDismiss($event)">
+<!--<ion-modal class="modal-players" trigger="players" (willDismiss)="onWillDismiss($event)">
 	<ng-template>
 		<ion-header>
 			<ion-toolbar>
@@ -162,4 +163,4 @@
 			</ion-list>
 		</ion-content>
 	</ng-template>
-</ion-modal>
+</ion-modal>-->

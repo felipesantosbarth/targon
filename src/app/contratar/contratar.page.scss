@@ -1,37 +1,4 @@
-:host, :root {
-   --branco: #ffffff;
-   --offwhite: #f9f9f9;
-   --magenta: #d950e5;
-   --lightgray: #ececec;
-   --gray: #c4c4c4;
-   --midgray: #a7a7a7;
-   --deepgray: #343434;
-   --preto: #000000;
-   --azul: #1b77f3;
-   --facebook: #1877f2;
-   --vermelho: #cf3c3f;
-   --bgpadrao: var(--offwhite);
-   --ion-background-color: var(--bgpadrao);
-}
 
-
-.page-desempenho {
-	--background: var(--offwhite);
-	background: var(--offwhite);
-}
-.modal-players {
-	.modal-content {
-		--background: var(--offwhite);
-		background: var(--offwhite);
-	}
-}
-.list-md {
-	margin-top: 12px;
-}
-ion-item::part(native) {
-	--padding-start: 0 !important;
-	--inner-padding-end: 0 !important;
-}
 .card-player {
 	width: 90%;
 	margin: auto;

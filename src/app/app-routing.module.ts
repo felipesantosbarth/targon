@@ -13,6 +13,10 @@ const routes: Routes = [
     path : '',
     redirectTo : 'login',
     pathMatch : 'full'
+  },
+  {
+    path: 'contratar',
+    loadChildren: () => import('./contratar/contratar.module').then( m => m.ContratarPageModule)
   }
 ];
 @NgModule({

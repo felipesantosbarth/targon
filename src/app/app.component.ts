@@ -19,6 +19,7 @@ import { environment } from '../environments/environment';
 
 import { LoginPage } from './login/login.page';
 import { TabsPage } from './tabs/tabs.page';
+// import { RoleListComponent } from './components/role-list/role-list.component';
 
 @Component({
 	selector: 'app-root',
