@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 // import { ComponentsModule } from '../components/components.module';
@@ -16,12 +16,14 @@ export class ContratarPage implements OnInit {
   	titulares: any;
   	players: any;
   	allplayers: any;
-  	user: any;
+  	@Input() user: any;
+  	@Input() moeda: number;
   	showLoader: boolean;
   	hasFired: boolean = false;
   	totalTemp: number;
   	moneyTemp: number;
   	todosTemp : any[] = [];
+  	todosOriginal : any[] = [];
   	titularesTemp : any[] = [];
   	reservasTemp : any[] = [];
   	showModalLoader: boolean;
@@ -46,12 +48,13 @@ export class ContratarPage implements OnInit {
   	}
 
 	ngOnInit() {
-		this.moneyTemp = this.user.moeda;
-	  	this.totalTemp = this.user.contratacoes.total;
-	  	this.todosTemp = this.user.contratacoes.lista.todos;
-	  	this.titularesTemp = this.user.contratacoes.lista.titulares;
-	  	this.reservasTemp = this.user.contratacoes.lista.reservas;
-
+		console.log(this.hasFired);
+		// this.moneyTemp = this.user.moeda;
+	 //  	this.totalTemp = this.user.contratacoes.total;
+	 //  	this.todosTemp = this.user.contratacoes.lista.todos;
+	 //  	this.titularesTemp = this.user.contratacoes.lista.titulares;
+	 //  	this.reservasTemp = this.user.contratacoes.lista.reservas;
+	  	this.resetValues('initial');
 		this.populatePlayers().then(res => this.showModalLoader = false);
 	}
 
@@ -61,6 +64,21 @@ export class ContratarPage implements OnInit {
 
 	killProgressBar() {
 		this.showLoader = false;
+	}
+
+	resetValues(origin) {		
+		console.log(this.moneyTemp,this.moeda);
+		if (origin == "initial") {
+			this.todosOriginal = this.user.contratacoes.lista.todos;
+		} else {
+			this.user.contratacoes.lista.todos = this.todosOriginal;
+		}
+	  	console.log(this.todosOriginal);
+		this.moneyTemp = this.user.moeda;
+	  	this.totalTemp = this.user.contratacoes.total;
+	  	this.todosTemp = this.user.contratacoes.lista.todos;
+	  	this.titularesTemp = this.user.contratacoes.lista.titulares;
+	  	this.reservasTemp = this.user.contratacoes.lista.reservas;
 	}
 
 	async populatePlayers() {
@@ -95,6 +113,47 @@ export class ContratarPage implements OnInit {
 		});
 	}
 
+
+
+	contratar(event, idSolicitante:number) {
+		event.stopPropagation();
+		let nome, text;
+		this.hasFired = true;
+		this.moneyTemp--;
+		this.totalTemp++;
+		this.todosTemp.push(idSolicitante);
+		if(this.titularesTemp.length==5) {
+			this.reservasTemp.push(idSolicitante);
+		} else {
+			this.titularesTemp.push(idSolicitante);
+		}
+
+		// console.log(this.titularesTemp);
+		// this.titulares.filter((item, index) => {
+		// // this.titulares.filter((item, index) => {
+		// 	if (item.id == idSolicitante) {
+		// 		nome = item.apelido;
+		// 	}
+		// });
+		// this.reservas.filter((item, index) => {
+		// // this.reservas.filter((item, index) => {
+		// 	if (item.id == idSolicitante) {
+		// 		nome = item.apelido;
+		// 	}
+		// });
+		// if (this.section == "titulares") { 
+		// 	this.section = "reservas";
+		// 	text = " da line-up?"
+		// }
+		// else { 
+		// 	this.section = "titulares"; 
+		// 	text = " para a line-up?"
+		// }
+		// this.aviso = "Substituir " + nome + text;
+		// this.aproval = true;
+		// this.presentToast("Substituir " + nome + text, "em-substituicao");
+	}
+
 	// modalSegmentChanged(ev: any) {
 	// 	let item: any;
 	// 	let val = this.sectionModal;
@@ -121,10 +180,8 @@ export class ContratarPage implements OnInit {
 	// 	}
 	// }
 	cancelModal() {
-		this.modaler.dismiss({
-			teste: this.totalTemp,
-		}, 'cancel');
-		/*if ((this.hasFired!=false) || (this.totalTemp!=this.user.contratacoes.total)) {
+		
+		if ((this.hasFired!=false) || (this.totalTemp!=this.user.contratacoes.total)) {
 			let truck:any = {
 				"aviso":"As contratações feitas serão ignoradas ao deixar essa tela. Deseja continuar e ignorar?",
 				"confirmTxtBtn":"Sim",
@@ -137,21 +194,37 @@ export class ContratarPage implements OnInit {
 			this.presentAlert(truck);
 		} else {
 			// this.modal.dismiss(null, 'cancel');
-			console.log('dismiss');
-		}*/
+			this.modaler.dismiss({
+				teste: this.totalTemp,
+			  	saldo: this.moneyTemp,
+			  	total: this.totalTemp,
+			  	todos: this.todosTemp,
+			  	titulares: this.titularesTemp,
+			  	reservas: this.reservasTemp,
+			}, 'cancel');
+			console.log('dismissed unchanged');
+		}
 	}
-	/*confirmModal() {
-	  	this.user.moeda = this.moneyTemp;
-	  	this.user.contratacoes.total = this.totalTemp;
-	  	this.user.contratacoes.lista.todos = this.todosTemp;
-	  	this.user.contratacoes.lista.titulares = this.titularesTemp;
-	  	this.user.contratacoes.lista.reservas = this.reservasTemp;
+	confirmModal() {
+	  	// this.user.moeda = this.moneyTemp;
+	  	// this.user.contratacoes.total = this.totalTemp;
+	  	// this.user.contratacoes.lista.todos = this.todosTemp;
+	  	// this.user.contratacoes.lista.titulares = this.titularesTemp;
+	  	// this.user.contratacoes.lista.reservas = this.reservasTemp;
 		// this.modal.dismiss(null, 'confirm');
-		console.log('dismiss');
-		
-		this.displayProgress();
-		this.populateTitulares(this.titularesTemp).then(res => this.killProgressBar());
-	}*/
+		console.log('confirm',this.titularesTemp);
+		this.modaler.dismiss({
+				teste: this.titularesTemp,
+			  	saldo: this.moneyTemp,
+			  	total: this.totalTemp,
+			  	todos: this.todosTemp,
+			  	titulares: this.titularesTemp,
+			  	reservas: this.reservasTemp,
+			}, 'confirm');
+			console.log('confirm changes');
+		// this.displayProgress();
+		// this.populateTitulares(this.titularesTemp).then(res => this.killProgressBar());
+	}
 
 	async presentAlert(mensagem:any) {
 		const alert = await this.alerter.create({
@@ -181,7 +254,16 @@ export class ContratarPage implements OnInit {
 					switch(mensagem.confirmAction) {
 						case 'closeModal':
 							// this.modal.dismiss(null, 'cancel');
-							console.log('dismiss')
+							this.resetValues('sair');
+							this.modaler.dismiss({
+								teste: this.totalTemp,
+								saldo: this.moneyTemp,
+								total: this.totalTemp,
+								todos: this.todosTemp,
+								titulares: this.titularesTemp,
+								reservas: this.reservasTemp,
+							}, 'cancel');
+							console.log('dismiss ignoring changes');
 						break;
 						default: 
 							this.presentToast(mensagem.confirmText, "error-msg");

@@ -79,6 +79,7 @@ export class Tab2Page {
 	}
 
 	async openNewModal() {
+		console.log(this.user.contratacoes.lista.todos);
 		const modal = await this.modaler.create({
 			component: ContratarPage,
 			cssClass: 'modal-players',
@@ -89,10 +90,15 @@ export class Tab2Page {
 		});
 		await modal.present();
 		modal.onDidDismiss().then((data) => {
-			if (data.role=='cancel') {
+			// data.role = backdrop / cancel / confirm;
+			if (data.role!='confirm') {
 				console.log(data);
-				this.teste = data.data.teste;
+				// this.teste = data.data.teste;
+				console.log('cancelou');
+			} else {
+				console.log('confirmou');
 			}
+			console.log(data.data.todos);
 		});
 	}
 	async openModal() {
@@ -108,7 +114,7 @@ export class Tab2Page {
 		// modal.present();
 	}
 
-	cancelModal() {
+	/*cancelModal() {
 		if ((this.hasFired!=false) || (this.totalTemp!=this.user.contratacoes.total)) {
 			let truck:any = {
 				"aviso":"As contratações feitas serão ignoradas ao deixar essa tela. Deseja continuar e ignorar?",
@@ -134,7 +140,7 @@ export class Tab2Page {
 		
 		this.displayProgress();
 		this.populateTitulares(this.titularesTemp).then(res => this.killProgressBar());
-	}
+	}*/
 	onWillDismiss(event: Event) {
 		console.log(this.todosTemp,this.user.contratacoes.lista.todos);
 		// const ev = event as CustomEvent<OverlayEventDetail<string>>;
