@@ -14,6 +14,7 @@ export class Tab2Page {
   	titulares: any;
   	players: any;
   	user: any;
+  	cloneuser: any;
   	showLoader: boolean;
   	hasFired: boolean = false;
   	totalTemp: number;
@@ -51,6 +52,7 @@ export class Tab2Page {
 				},
 			}
 		};
+		// this.cloneuser = Object.assign({}, this.user);
 	}
 
 	displayProgress() {
@@ -79,13 +81,13 @@ export class Tab2Page {
 	}
 
 	async openNewModal() {
-		console.log(this.user.contratacoes.lista.todos);
+		// console.log(this.user.contratacoes.lista.todos);
+		this.cloneuser = JSON.parse(JSON.stringify(this.user));
 		const modal = await this.modaler.create({
 			component: ContratarPage,
 			cssClass: 'modal-players',
 			componentProps: {
-				user: this.user,
-				moeda: this.user.moeda,
+				usu: this.cloneuser
 			}
 		});
 		await modal.present();
@@ -94,11 +96,15 @@ export class Tab2Page {
 			if (data.role!='confirm') {
 				console.log(data);
 				// this.teste = data.data.teste;
+				this.cloneuser = [];
 				console.log('cancelou');
 			} else {
+				this.displayProgress();
 				console.log('confirmou');
+				this.user.contratacoes = this.cloneuser.contratacoes;
+				this.user.moeda = this.cloneuser.moeda;
+				this.populateTitulares(this.user.contratacoes.lista.titulares).then(res => this.killProgressBar());
 			}
-			console.log(data.data.todos);
 		});
 	}
 	async openModal() {
@@ -287,7 +293,7 @@ export class Tab2Page {
 		await toast.present();
 	}
 
-	contratar(event, idSolicitante:number) {
+	/*contratar(event, idSolicitante:number) {
 		event.stopPropagation();
 		let nome, text;
 		this.totalTemp++;
@@ -322,9 +328,10 @@ export class Tab2Page {
 		// this.aviso = "Substituir " + nome + text;
 		// this.aproval = true;
 		// this.presentToast("Substituir " + nome + text, "em-substituicao");
-	}
+	}*/
 
 	async populatePlayers() {
+		console.log('Populating players');
 		return new Promise(resolve => {
 			// this.http.get('https://acaodireta.com/testes/v3/api/players?apikey='+hash)
 			this.http.get('https://acaodireta.com/testes/v3/api/players?apikey='+this.hash)

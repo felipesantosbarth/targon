@@ -3,9 +3,9 @@
 		<ion-buttons slot="start">
 			<ion-button (click)="cancelModal()"><ion-icon name="close-outline"></ion-icon></ion-button>
 		</ion-buttons>
-		<ion-title class="ion-text-center">Page teste {{ totalTemp }}/{{ user.contratacoes.limite }}</ion-title>
+		<ion-title class="ion-text-center">Page teste {{ totalTemp }}/{{ usuario.contratacoes.limite }}</ion-title>
 		<ion-buttons slot="end">
-			<ion-button (click)="confirmModal()"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
+			<ion-button *ngIf="hasFired" (click)="confirmModal()"><ion-icon name="checkmark-outline"></ion-icon></ion-button>
 		</ion-buttons>
 	</ion-toolbar>
 	<ion-searchbar placeholder="Procurar" (ionInput)="procurar($event)"></ion-searchbar>
@@ -56,10 +56,10 @@
 				</ion-row>
 			</ion-grid>
 			<ion-buttons class="ion-align-items-center action-section">
-				<button ion-button class="btn-action-team contratar" *ngIf="(user.contratacoes.lista.todos.indexOf(jogador.id) === -1)" (click)="contratar($event, jogador.id)" [disabled]="((totalTemp==user.contratacoes.limite) || (moneyTemp < 0))">
+				<button ion-button class="btn-action-team contratar" *ngIf="(usuario.contratacoes.lista.todos.indexOf(jogador.id) === -1)" (click)="contratar($event, jogador.id)" [disabled]="((totalTemp==usuario.contratacoes.limite) || (moneyTemp < 0))">
 					<ion-icon name="add-circle-outline"></ion-icon>
 				</button>
-				<button ion-button class="btn-action-team vender" icon-only *ngIf="(user.contratacoes.lista.todos.indexOf(jogador.id) > -1)" (click)="trocarEscalacao($event, jogador.id)">
+				<button ion-button class="btn-action-team vender" icon-only *ngIf="(usuario.contratacoes.lista.todos.indexOf(jogador.id) > -1)" (click)="trocarEscalacao($event, jogador.id)">
 					<ion-icon name="remove-circle-outline"></ion-icon>
 				</button>
 			</ion-buttons>

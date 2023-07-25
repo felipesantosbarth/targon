@@ -16,14 +16,14 @@ export class ContratarPage implements OnInit {
   	titulares: any;
   	players: any;
   	allplayers: any;
-  	@Input() user: any;
+  	usuario: any;
+  	@Input() usu: any;
   	@Input() moeda: number;
   	showLoader: boolean;
   	hasFired: boolean = false;
   	totalTemp: number;
   	moneyTemp: number;
   	todosTemp : any[] = [];
-  	todosOriginal : any[] = [];
   	titularesTemp : any[] = [];
   	reservasTemp : any[] = [];
   	showModalLoader: boolean;
@@ -37,23 +37,23 @@ export class ContratarPage implements OnInit {
   	constructor(public http: HttpClient, private toaster: ToastController,private modaler: ModalController, private alerter: AlertController) {
 		this.sectionModal = "all";
 		this.showModalLoader = true;
-		// console.log(this.user);
-	  	/*this.moneyTemp = this.user.moeda;
-	  	this.totalTemp = this.user.contratacoes.total;
-	  	this.todosTemp = this.user.contratacoes.lista.todos;
-	  	this.titularesTemp = this.user.contratacoes.lista.titulares;
-	  	this.reservasTemp = this.user.contratacoes.lista.reservas;
+		// console.log(this.usuario);
+	  	/*this.moneyTemp = this.usuario.moeda;
+	  	this.totalTemp = this.usuario.contratacoes.total;
+	  	this.todosTemp = this.usuario.contratacoes.lista.todos;
+	  	this.titularesTemp = this.usuario.contratacoes.lista.titulares;
+	  	this.reservasTemp = this.usuario.contratacoes.lista.reservas;
 
 		this.populatePlayers().then(res => this.showModalLoader = false);*/
   	}
 
 	ngOnInit() {
 		console.log(this.hasFired);
-		// this.moneyTemp = this.user.moeda;
-	 //  	this.totalTemp = this.user.contratacoes.total;
-	 //  	this.todosTemp = this.user.contratacoes.lista.todos;
-	 //  	this.titularesTemp = this.user.contratacoes.lista.titulares;
-	 //  	this.reservasTemp = this.user.contratacoes.lista.reservas;
+		// this.moneyTemp = this.usuario.moeda;
+	 //  	this.totalTemp = this.usuario.contratacoes.total;
+	 //  	this.todosTemp = this.usuario.contratacoes.lista.todos;
+	 //  	this.titularesTemp = this.usuario.contratacoes.lista.titulares;
+	 //  	this.reservasTemp = this.usuario.contratacoes.lista.reservas;
 	  	this.resetValues('initial');
 		this.populatePlayers().then(res => this.showModalLoader = false);
 	}
@@ -67,18 +67,13 @@ export class ContratarPage implements OnInit {
 	}
 
 	resetValues(origin) {		
-		console.log(this.moneyTemp,this.moeda);
-		if (origin == "initial") {
-			this.todosOriginal = this.user.contratacoes.lista.todos;
-		} else {
-			this.user.contratacoes.lista.todos = this.todosOriginal;
-		}
-	  	console.log(this.todosOriginal);
-		this.moneyTemp = this.user.moeda;
-	  	this.totalTemp = this.user.contratacoes.total;
-	  	this.todosTemp = this.user.contratacoes.lista.todos;
-	  	this.titularesTemp = this.user.contratacoes.lista.titulares;
-	  	this.reservasTemp = this.user.contratacoes.lista.reservas;
+		this.usuario = this.usu;
+		this.moneyTemp = this.usuario.moeda;
+	  	this.totalTemp = this.usuario.contratacoes.total;
+	  	this.todosTemp = this.usuario.contratacoes.lista.todos;
+	  	this.titularesTemp = this.usuario.contratacoes.lista.titulares;
+	  	this.reservasTemp = this.usuario.contratacoes.lista.reservas;
+		console.log(this.totalTemp, this.usuario.contratacoes.limite, this.usuario.contratacoes.lista.titulares);
 	}
 
 	async populatePlayers() {
@@ -118,14 +113,18 @@ export class ContratarPage implements OnInit {
 	contratar(event, idSolicitante:number) {
 		event.stopPropagation();
 		let nome, text;
-		this.hasFired = true;
-		this.moneyTemp--;
-		this.totalTemp++;
-		this.todosTemp.push(idSolicitante);
-		if(this.titularesTemp.length==5) {
-			this.reservasTemp.push(idSolicitante);
-		} else {
-			this.titularesTemp.push(idSolicitante);
+		if (this.totalTemp < this.usuario.contratacoes.limite) {
+			this.hasFired = true;
+			this.moneyTemp--;
+			this.totalTemp++;
+			this.usuario.contratacoes.total = this.totalTemp;
+			this.usuario.moeda = this.moneyTemp;
+			this.todosTemp.push(idSolicitante);
+			if((this.titularesTemp.length==5) && (this.usuario.premium=="true")) {
+				this.reservasTemp.push(idSolicitante);
+			} else {
+				this.titularesTemp.push(idSolicitante);
+			}
 		}
 
 		// console.log(this.titularesTemp);
@@ -181,7 +180,7 @@ export class ContratarPage implements OnInit {
 	// }
 	cancelModal() {
 		
-		if ((this.hasFired!=false) || (this.totalTemp!=this.user.contratacoes.total)) {
+		if ((this.hasFired!=false) || (this.totalTemp!=this.usuario.contratacoes.total)) {
 			let truck:any = {
 				"aviso":"As contratações feitas serão ignoradas ao deixar essa tela. Deseja continuar e ignorar?",
 				"confirmTxtBtn":"Sim",
@@ -206,11 +205,11 @@ export class ContratarPage implements OnInit {
 		}
 	}
 	confirmModal() {
-	  	// this.user.moeda = this.moneyTemp;
-	  	// this.user.contratacoes.total = this.totalTemp;
-	  	// this.user.contratacoes.lista.todos = this.todosTemp;
-	  	// this.user.contratacoes.lista.titulares = this.titularesTemp;
-	  	// this.user.contratacoes.lista.reservas = this.reservasTemp;
+	  	// this.usuario.moeda = this.moneyTemp;
+	  	// this.usuario.contratacoes.total = this.totalTemp;
+	  	// this.usuario.contratacoes.lista.todos = this.todosTemp;
+	  	// this.usuario.contratacoes.lista.titulares = this.titularesTemp;
+	  	// this.usuario.contratacoes.lista.reservas = this.reservasTemp;
 		// this.modal.dismiss(null, 'confirm');
 		console.log('confirm',this.titularesTemp);
 		this.modaler.dismiss({
