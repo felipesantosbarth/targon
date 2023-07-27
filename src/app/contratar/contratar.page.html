@@ -59,7 +59,7 @@
 				<button ion-button class="btn-action-team contratar" *ngIf="(usuario.contratacoes.lista.todos.indexOf(jogador.id) === -1)" (click)="contratar($event, jogador.id)" [disabled]="((totalTemp==usuario.contratacoes.limite) || (moneyTemp < 0))">
 					<ion-icon name="add-circle-outline"></ion-icon>
 				</button>
-				<button ion-button class="btn-action-team vender" icon-only *ngIf="(usuario.contratacoes.lista.todos.indexOf(jogador.id) > -1)" (click)="trocarEscalacao($event, jogador.id)">
+				<button ion-button class="btn-action-team vender" icon-only *ngIf="(usuario.contratacoes.lista.todos.indexOf(jogador.id) > -1)" (click)="demitir($event, jogador.id)">
 					<ion-icon name="remove-circle-outline"></ion-icon>
 				</button>
 			</ion-buttons>
@@ -84,3 +84,8 @@
 		</ion-item>
 	</ion-list>
 </ion-content>
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+	<ion-fab-button>
+		{{ moneyTemp }}
+	</ion-fab-button>
+</ion-fab>

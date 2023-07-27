@@ -20,6 +20,7 @@ export class ContratarPage implements OnInit {
   	@Input() usu: any;
   	@Input() moeda: number;
   	showLoader: boolean;
+  	sectionReset: boolean;
   	hasFired: boolean = false;
   	totalTemp: number;
   	moneyTemp: number;
@@ -115,42 +116,84 @@ export class ContratarPage implements OnInit {
 		let nome, text;
 		if (this.totalTemp < this.usuario.contratacoes.limite) {
 			this.hasFired = true;
-			this.moneyTemp--;
+			// this.moneyTemp--;
 			this.totalTemp++;
 			this.usuario.contratacoes.total = this.totalTemp;
-			this.usuario.moeda = this.moneyTemp;
+			// this.usuario.moeda = this.moneyTemp;
 			this.todosTemp.push(idSolicitante);
 			if((this.titularesTemp.length==5) && (this.usuario.premium=="true")) {
 				this.reservasTemp.push(idSolicitante);
 			} else {
 				this.titularesTemp.push(idSolicitante);
 			}
+			let custo = this.getPlayerPropertyById(idSolicitante, "valorizacao");
+			this.atualizaOuro("compra", custo);
 		}
+	}
 
-		// console.log(this.titularesTemp);
-		// this.titulares.filter((item, index) => {
-		// // this.titulares.filter((item, index) => {
-		// 	if (item.id == idSolicitante) {
-		// 		nome = item.apelido;
-		// 	}
-		// });
-		// this.reservas.filter((item, index) => {
-		// // this.reservas.filter((item, index) => {
-		// 	if (item.id == idSolicitante) {
-		// 		nome = item.apelido;
-		// 	}
-		// });
-		// if (this.section == "titulares") { 
-		// 	this.section = "reservas";
-		// 	text = " da line-up?"
-		// }
-		// else { 
-		// 	this.section = "titulares"; 
-		// 	text = " para a line-up?"
-		// }
-		// this.aviso = "Substituir " + nome + text;
-		// this.aproval = true;
-		// this.presentToast("Substituir " + nome + text, "em-substituicao");
+	demitir(event, idSolicitante:number) {
+		event.stopPropagation();
+		// redundancia na validação por segurança
+		if ((this.totalTemp > 0) && (this.getSimplePositionById(idSolicitante, this.todosTemp) > -1)) {
+			this.hasFired = true;
+			// this.moneyTemp++;
+			this.totalTemp--;
+			this.usuario.contratacoes.total = this.totalTemp;
+
+			this.removeContratacao(idSolicitante);
+			let custo = this.getPlayerPropertyById(idSolicitante, "valorizacao");
+			this.atualizaOuro("venda", custo);
+			console.log(this.players);
+		}
+	}
+
+	getSimplePositionById(id, obj) {
+		return obj.map(object => object).indexOf(id);
+	}
+
+
+	getComplexPositionById(id, obj) {
+		return obj.map(object => object.id).indexOf(id);
+	}
+
+	getPlayerPropertyById(id, property) {
+		let listIndexPlayers = this.getComplexPositionById(id, this.players);
+		let player = this.players[listIndexPlayers][property];
+		return player;
+	}
+
+	removeContratacao(id) {
+		// remove do todosTemp
+		let listIndexTodos = this.getSimplePositionById(id, this.todosTemp);
+		this.todosTemp.splice(listIndexTodos, 1);
+		// remove dos titularesTemp
+		let listIndexTit = this.getSimplePositionById(id, this.titularesTemp);
+		if (listIndexTit > -1) {
+			this.titularesTemp.splice(listIndexTit, 1);
+		}
+		// if premium
+			// remove dos reservasTemp
+		if (this.usuario.premium) {
+			let listIndexRes = this.getSimplePositionById(id, this.reservasTemp);
+			if (listIndexRes > -1) {
+				this.reservasTemp.splice(listIndexRes, 1);
+			}
+		}
+	}
+
+	atualizaOuro(tipo, custo:number) {
+		let result;
+		if (tipo=="compra") {
+			this.moneyTemp = this.moneyTemp - custo;
+		} else if (tipo=="venda") {
+			this.moneyTemp = this.moneyTemp - (-custo);
+		}
+		else {
+			this.presentToast("Ação inválida", "error-msg");
+			return;
+		}
+		this.usuario.moeda = this.moneyTemp;
+		// this.presentToast("A " + tipo + " do jogador foi concluída!", "ok-msg");
 	}
 
 	// modalSegmentChanged(ev: any) {
@@ -355,7 +398,7 @@ export class ContratarPage implements OnInit {
 		let id:number = 0;
 		let item: any;
 		this.sectionModal = "all";
-		
+		this.sectionReset = true;
 		// if the value is an empty string don't filter the items
 		if (val && val.trim() != '') {
 			let alerta = this.players.filter((jogador, index) => {
@@ -378,6 +421,7 @@ export class ContratarPage implements OnInit {
 			});
 		}
 		// this.slides.slideTo(id);
+		this.sectionReset = false;
 		return 0;
 	}
 }
