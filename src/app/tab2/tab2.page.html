@@ -3,6 +3,9 @@
 		<ion-title>
 			Escalação
 		</ion-title>
+		<ion-buttons slot="end">
+			<ion-button><ion-icon name="checkmark-outline"></ion-icon> {{ user.moeda }}</ion-button>
+		</ion-buttons>
 		<ion-progress-bar *ngIf="showLoader" type="indeterminate"></ion-progress-bar>
 	</ion-toolbar>
 </ion-header>
@@ -72,7 +75,6 @@
 			</ion-item>
 		</ion-list>
 		<ion-button *ngIf="user.contratacoes.total <= user.contratacoes.limite" id="players" (click)="openNewModal()" class="notification-btn" size="defalt" strong="true"><ion-icon name="add-circle-outline"></ion-icon> Contratar</ion-button>
-		<p>{{ teste }}</p>
 	</div>
 </ion-content>
 <!--<ion-modal class="modal-players" trigger="players" (willDismiss)="onWillDismiss($event)">

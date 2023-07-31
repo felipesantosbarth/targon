@@ -23,7 +23,6 @@ export class Tab2Page {
   	titularesTemp : any[] = [];
   	reservasTemp : any[] = [];
   	showModalLoader: boolean;
-  	public teste = "teste";
   	public playerListVisible = "visible";
   	public sectionModal: any = "all";
 	public scopo: any[] = [];
@@ -94,8 +93,6 @@ export class Tab2Page {
 		modal.onDidDismiss().then((data) => {
 			// data.role = backdrop / cancel / confirm;
 			if (data.role!='confirm') {
-				console.log(data);
-				// this.teste = data.data.teste;
 				this.cloneuser = [];
 				console.log('cancelou');
 			} else {
