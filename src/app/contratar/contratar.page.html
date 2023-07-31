@@ -9,7 +9,7 @@
 		</ion-buttons>
 	</ion-toolbar>
 	<ion-searchbar placeholder="Procurar" (ionInput)="procurar($event)"></ion-searchbar>
-	<app-role-list (selectedLane)="spreadLane($event)"></app-role-list>
+	<app-role-list (selectedLane)="spreadLane($event)" [isFiltering]="isFiltering"></app-role-list>
 	<!--<ion-segment class="role-segment" [(ngModel)]="sectionModal" value="{{ sectionModal }}" id="role-search" swipe-gesture="true" (ionChange)="modalSegmentChanged($event)">
 		<ion-segment-button value="all">
 			All

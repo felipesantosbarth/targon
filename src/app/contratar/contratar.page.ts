@@ -20,7 +20,7 @@ export class ContratarPage implements OnInit {
   	@Input() usu: any;
   	@Input() moeda: number;
   	showLoader: boolean;
-  	sectionReset: boolean;
+  	isFiltering: boolean;
   	hasFired: boolean = false;
   	totalTemp: number;
   	moneyTemp: number;
@@ -398,7 +398,7 @@ export class ContratarPage implements OnInit {
 		let id:number = 0;
 		let item: any;
 		this.sectionModal = "all";
-		this.sectionReset = true;
+		this.isFiltering = val.length > 0;
 		// if the value is an empty string don't filter the items
 		if (val && val.trim() != '') {
 			let alerta = this.players.filter((jogador, index) => {
@@ -421,7 +421,6 @@ export class ContratarPage implements OnInit {
 			});
 		}
 		// this.slides.slideTo(id);
-		this.sectionReset = false;
 		return 0;
 	}
 }

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
 	selector: 'app-role-list',
@@ -12,6 +12,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 	styleUrls: ['./role-list.component.scss'],
 })
 export class RoleListComponent implements OnInit {
+	@Input() isFiltering : boolean = false;
 	@Output() selectedLane : EventEmitter<any> = new EventEmitter();
 
   	public sectionModal: any = "all";
@@ -22,34 +23,24 @@ export class RoleListComponent implements OnInit {
 		this.selectedLane.emit(this.sectionModal);
 	}
 
+	ngOnChanges(changes: SimpleChanges) {
+		// Verifica se o Campo de filtro foi ativado
+		if (changes.isFiltering) {
+			let changed = changes.isFiltering.currentValue;
+			if (changed === true) {
+				// Define evento artificial para passagem de parâmetro solicitada na função original
+				let fakeEv = new CustomEvent('filteringEvent', {detail: {value: 'all'},});
+				// Evecuta a função original para troca do segmento
+				this.modalSegmentChanged(fakeEv);
+			}
+		}
+	}
 
 	modalSegmentChanged(ev: any) {
 		let item: any;
-		// console.log(ev, ev.detail, ev.detail.value);
 		this.sectionModal = ev.detail.value;
 		let val = this.sectionModal;
 		this.selectedLane.emit(val);
-		/*if (val != 'all') {
-			let alerta = this.players.filter((jogador, index) => {
-				item = document.getElementById('indice-'+index);
-				item.classList.remove('visible');
-				item.classList.remove('not-visible');
-				if (jogador.posicao.id == val) {
-					item.classList.add('visible');
-					// this.item[index].style = "visible";
-				} else {
-					item.classList.add('not-visible');
-					// this.playerListVisible = "not-visible";
-				}
-			});
-		} else {
-			let alerta = this.players.filter((jogador, index) => {
-				item = document.getElementById('indice-'+index);
-				// item = document.getElementsByClassName('card-player').item(index);
-				item.classList.remove('visible');
-				item.classList.remove('not-visible');
-			});
-		}*/
 	}
 
 }
